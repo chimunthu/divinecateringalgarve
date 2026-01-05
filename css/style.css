@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "gothamregular", sans-serif;
+  font-family: "Noto Serif", serif;
 }
 .background {
   position: fixed;
@@ -24,27 +24,103 @@ html {
   align-items: center;
 }
 .content {
-  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 600px;
   width: 90%;
+  color: #f2f2f2;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 .logo {
   max-width: 400px;
   margin-bottom: 20px;
 }
 .contact-info {
-  color: #93c01f;
-  margin: 20px 0;
-  font-family: "gothambold", monospace;
-  line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+  align-items: center;
 }
 
 p.brevetext {
-  color: #0e434d;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: linear-gradient(120deg, #ffffff 0%, #f6edd5 50%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  color: #f4d58a;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(244, 213, 138, 0.45);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-item i {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #f4d58a; /* força o tom dourado no ícone */
+  flex-shrink: 0;
+}
+
+.contact-item i.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.contact-item:hover {
+  border-color: #f4d58a;
+  background: rgba(244, 213, 138, 0.08);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .container {
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+
+  .content {
+    padding: 24px 18px;
+    width: 100%;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  }
+
+  .logo {
+    max-width: 70vw;
+    margin-bottom: 16px;
+  }
+
+  .contact-info {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+
+  p.brevetext {
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+  }
 }
 
 .video-container {
